@@ -22,7 +22,7 @@ The sample dataset includes various details about each order, such as:
 Let's jump into the Python packages you need. Within the Python environment of your choice, run:
 
 ```python
-git clone https://github.com/zenml-io/zenml-projects.git
+git clone https://github.com/KishoreReddy03/Retail-Price-Optimization-MLOps.git
 pip install -r requirements.txt
 ```
 
@@ -43,13 +43,13 @@ zenml integration install bentoml
 The project can only be executed with a ZenML stack that has an MLflow experiment tracker and BentoML model deployer as a component. Configuring a new stack with the two components are as follows:
 
 ```
-zenml experiment-tracker register mlflow_tracker --flavor=mlflow
+zenml experiment-tracker register mlflow_tracker_mlops --flavor=mlflow
 zenml model-deployer register bentoml_deployer --flavor=bentoml
 zenml stack register local_bentoml_stack \
   -a default \
   -o default \
   -d bentoml_deployer \
-  -e mlflow_tracker
+  -e mlflow_tracker_mlops
   --set
 ```
 
